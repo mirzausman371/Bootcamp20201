@@ -7,8 +7,7 @@ name: CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,4 +31,4 @@ jobs:
       run : npm install --globally surge
       
     - name: Run Surge
-      run: surge ./ newappbootcamp.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./ little-skate.surge.sh --token ${{secrets.SURGE_TOKEN}}
